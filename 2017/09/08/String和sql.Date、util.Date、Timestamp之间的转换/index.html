@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="z">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>String和sql.Date、util.Date、Timestamp之间的转换 | sinnamm</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="来一起排列字母，改变世界呀">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="String和sql.Date、util.Date、Timestamp之间的转换 | sinnamm">
+    <meta name="twitter:description" content="来一起排列字母，改变世界呀">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="String和sql.Date、util.Date、Timestamp之间的转换 | sinnamm">
+    <meta property="og:description" content="来一起排列字母，改变世界呀">
+
+    
+    <meta name="author" content="sinnamm">
+    
+    <link rel="stylesheet" href="/css/vno.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    
+    <link rel="icon" href="/images/avatar-small.png">
+    
+
+    <meta name="generator" content="hexo"/>
+    
+    <link rel="alternate" type="application/rss+xml" title="sinnamm" href="/atom.xml">
+    
+
+    <link rel="canonical" href="http://wmmmm.github.io/2017/09/08/String和sql.Date、util.Date、Timestamp之间的转换/"/>
+
+                 
+</head>
+
+<body class="home-template no-js">
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 sinnamm 的主页"><img src="/images/avatar.jpg" width="80" alt="sinnamm logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for sinnamm">sinnamm</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">简单.美好</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">来一起排列字母，改变世界呀</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">myBlog</a></li>
+            
+              <li class="navigation__item"><a href="/">主页</a></li>
+            
+              <li class="navigation__item"><a href="/categories/blog">技术栈</a></li>
+            
+              <li class="navigation__item"><a href="/categories/essay">随笔堆</a></li>
+            
+              <li class="navigation__item"><a href="/aboutme">关于我</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+  <li class="navigation__item">
+    <a href="http://weibo.com/5602162089/profile?topnav=1&amp;wvr=6" title="我的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> 
+
+
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/Wmmmm" title="查看我的GitHub主页" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+
+<!-- Facebook -->
+
+  <li class="navigation__item">
+    <a href="https://www.facebook.com/mei.wang.56027" title="上Facebook找我" target="_blank">
+      <i class='social fa fa-facebook'></i>
+      <span class="label">Facebook</span>
+    </a>
+  </li>
+
+  
+<!-- Twitter -->
+
+  
+
+  <li class="navigation__item">
+    <a href="/atom.xml" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-purple"></div>
+  </div> 
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2017-09-07T16:00:00.000Z" class="post-list__meta--date date">2017-09-08</time> &#8226; <span class="post-meta__tags tags">于 
+  <a class="tag-link" href="/tags/java/">java</a>
+ </span>
+      <span class="page-pv">
+       阅读 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+      </span> 
+   
+    </div>
+    <h1 class="post-title">String和sql.Date、util.Date、Timestamp之间的转换</h1>
+  </header>
+
+  <section class="post">
+    <h2 id="1-String-lt-gt-sql-Date"><a href="#1-String-lt-gt-sql-Date" class="headerlink" title="1. String&lt;-&gt;sql.Date"></a>1. String&lt;-&gt;sql.Date</h2><p>###String-&gt;sql.Date</p>
+<pre><code>String dateStr = &quot;2017-09-09&quot;;
+DateFormat dFormat =  new SimpleDateFormat(&quot;yyyy-mm-dd&quot;);
+try {
+    java.util.Date uDate = dFormat.parse(dateStr);
+    Date sDate = new Date(uDate.getTime());
+} catch (ParseException e) {
+    // TODO Auto-generated catch block
+    e.printStackTrace();
+}
+</code></pre><h3 id="sql-Date-gt-String"><a href="#sql-Date-gt-String" class="headerlink" title="sql.Date-&gt;String"></a>sql.Date-&gt;String</h3><pre><code>sDate.toString();
+</code></pre><h2 id="2-String-lt-gt-util-Date"><a href="#2-String-lt-gt-util-Date" class="headerlink" title="2. String&lt;-&gt;util.Date"></a>2. String&lt;-&gt;util.Date</h2><h3 id="String-gt-util-Date"><a href="#String-gt-util-Date" class="headerlink" title="String-&gt;util.Date"></a>String-&gt;util.Date</h3><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">String dateStr = &quot;2010/05/04 12:34:23&quot;;   </div><div class="line">Date date = new Date();   </div><div class="line">//注意format的格式要与日期String的格式相匹配   </div><div class="line">DateFormat sdf = new SimpleDateFormat(&quot;yyyy/MM/dd HH:mm:ss&quot;);   </div><div class="line">try &#123;   </div><div class="line">date = sdf.parse(dateStr);</div><div class="line">System.out.println(date.toString());   </div><div class="line">&#125; catch (Exception e) &#123;</div><div class="line">e.printStackTrace();   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</code></pre><h3 id="util-Date-gt-String"><a href="#util-Date-gt-String" class="headerlink" title="util.Date-&gt;String"></a>util.Date-&gt;String</h3><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">String dateStr = &quot;&quot;;   </div><div class="line">Date date = new Date();   </div><div class="line">//format的格式可以任意   </div><div class="line">DateFormat sdf = new SimpleDateFormat(&quot;yyyy/MM/dd HH:mm:ss&quot;);   </div><div class="line">DateFormat sdf2 = new SimpleDateFormat(&quot;yyyy-MM-dd HH/mm/ss&quot;);   </div><div class="line">try &#123;   </div><div class="line">dateStr = sdf.format(date);   </div><div class="line">System.out.println(dateStr);   </div><div class="line">dateStr = sdf2.format(date);   </div><div class="line">System.out.println(dateStr);   </div><div class="line">&#125; catch (Exception e) &#123;   </div><div class="line">e.printStackTrace();   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</code></pre><h2 id="3-String-lt-gt-Timestamp"><a href="#3-String-lt-gt-Timestamp" class="headerlink" title="3. String&lt;-&gt;Timestamp"></a>3. String&lt;-&gt;Timestamp</h2><h3 id="Stirng-gt-Timestamp"><a href="#Stirng-gt-Timestamp" class="headerlink" title="Stirng-&gt;Timestamp"></a>Stirng-&gt;Timestamp</h3><p>( 注：String的类型必须形如： yyyy-mm-dd hh:mm:ss[.f…] 这样的格式，中括号表示可选，否则报错！！！)</p>
+<pre><code>String tsStr = &quot;2011-05-09 11:49:45&quot;;
+Timestamp ts = new Timestamp(System.currentTimeMillis());   
+try {   
+ts = Timestamp.valueOf(tsStr);   
+System.out.println(ts);   
+} catch (Exception e) {   
+e.printStackTrace();   
+}  
+</code></pre><h3 id="Timestamp-gt-String"><a href="#Timestamp-gt-String" class="headerlink" title="Timestamp-&gt;String"></a>Timestamp-&gt;String</h3><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Timestamp ts = new Timestamp(System.currentTimeMillis());   </div><div class="line">String tsStr = &quot;&quot;;   </div><div class="line">DateFormat sdf = new SimpleDateFormat(&quot;yyyy/MM/dd HH:mm:ss&quot;);   </div><div class="line">try &#123;   </div><div class="line">//方法一   </div><div class="line">tsStr = sdf.format(ts);   </div><div class="line">System.out.println(tsStr);   </div><div class="line">//方法二   </div><div class="line">tsStr = ts.toString();   </div><div class="line">System.out.println(tsStr);   </div><div class="line">&#125; catch (Exception e) &#123;   </div><div class="line">e.printStackTrace();   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</code></pre><h2 id="4-sql-Date-lt-gt-util-Date"><a href="#4-sql-Date-lt-gt-util-Date" class="headerlink" title="4. sql.Date&lt;-&gt;util.Date"></a>4. sql.Date&lt;-&gt;util.Date</h2><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">java.util.Date date = new java.util.Date();</div><div class="line">SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);  </div><div class="line">try &#123;  </div><div class="line">date = sdf.parse(birthdayStr);  </div><div class="line">&#125; catch (Exception e) &#123;  </div><div class="line">e.printStackTrace();  </div><div class="line">&#125;  </div><div class="line">Date birthday = new Date(date.getTime());</div></pre></td></tr></table></figure>
+</code></pre><h2 id="5-util-Date-lt-gt-Timestamp"><a href="#5-util-Date-lt-gt-Timestamp" class="headerlink" title="5.util.Date&lt;-&gt;Timestamp"></a>5.util.Date&lt;-&gt;Timestamp</h2><p>(Timestamp是util.Date的子类)</p>
+<h3 id="Timestamp-gt-util-Date"><a href="#Timestamp-gt-util-Date" class="headerlink" title="Timestamp-&gt;util.Date"></a>Timestamp-&gt;util.Date</h3><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Timestamp ts = new Timestamp(System.currentTimeMillis());   </div><div class="line">Date date = new Date();   </div><div class="line">try &#123;   </div><div class="line">date = ts;   </div><div class="line">System.out.println(date);   </div><div class="line">&#125; catch (Exception e) &#123;   </div><div class="line">e.printStackTrace();   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</code></pre>
+  </section>
+
+</article>
+
+<section class="read-more">
+           
+    
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">最近的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2017/09/08/Bootstrap表单验证/" title="Bootstrap表单验证">Bootstrap表单验证</a></h2>
+                <p class="excerpt">
+                
+                Bootstrap表单验证——bootstrapvalidator// 验证表单
+function validateForm(){
+
+$(&amp;quot;form&amp;quot;).bootstrapValidator({
+    message: &amp;apos;This value is not valid
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2017-09-07T16:00:00.000Z" class="post-list__meta--date date">2017-09-08</time> &#8226; <span class="post-list__meta--tags tags">于 
+  <a class="tag-link" href="/tags/bootstrap/">bootstrap</a>
+</span><a class="btn-border-small" href="/2017/09/08/Bootstrap表单验证/">继续阅读</a></div>
+                           
+            </div>
+        
+        
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">更早的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2017/02/18/test/" title="First Night">First Night</a></h2>
+                <p class="excerpt">
+                
+                
+我有一头小毛驴，可是我从来都不骑。啦啦啦
+
+
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2017-02-18T14:55:08.000Z" class="post-list__meta--date date">2017-02-18</time> &#8226; <span class="post-list__meta--tags tags">于 
+  <a class="tag-link" href="/tags/写作/">写作</a>
+</span><a class="btn-border-small" href="/2017/02/18/test/">继续阅读</a></div>
+                       
+            </div>
+        
+     
+   
+   
+  
+</section>
+
+  
+<section class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'Wmmmm'; 
+      
+  var disqus_identifier = '/2017/09/08/String和sql.Date、util.Date、Timestamp之间的转换/';
+  var disqus_title = 'String和sql.Date、util.Date、Timestamp之间的转换';
+  var disqus_url = 'http://wmmmm.github.io/2017/09/08/String和sql.Date、util.Date、Timestamp之间的转换/';
+  
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          //dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+          dsq.src = 'https://a.disquscdn.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+            <footer class="footer">
+    <span class="footer__copyright">
+        &copy; 2017 sinnamm - 本站点采用 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+       
+    </span>
+    <span class="footer__copyright">
+             - 基于 <a href="http://hexo.io">Hexo</a> 搭建，使用 <a href="https://github.com/monniya/hexo-theme-new-vno ">new-vno</a> 主题，由<a href="https://monniya.com ">@Monniya</a> 修改自 <a href="https://github.com/lenbo-ma/hexo-theme-vno" target="_blank">Vno</a>, 原创出自<a href="http://github.com/onevcat/vno" target="_blank">onevcat</a>
+         </span>
+       
+    
+    
+</footer>
+
+
+        </div>
+    </div>
+
+     
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-78918255-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?9cdad07c755fa23f6aced510c6760e87";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    
+</body>
+</html>

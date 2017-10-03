@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="z">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>JQuery语法、选择器和常用元素操作 | sinnamm</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="来一起排列字母，改变世界呀">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="JQuery语法、选择器和常用元素操作 | sinnamm">
+    <meta name="twitter:description" content="来一起排列字母，改变世界呀">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="JQuery语法、选择器和常用元素操作 | sinnamm">
+    <meta property="og:description" content="来一起排列字母，改变世界呀">
+
+    
+    <meta name="author" content="sinnamm">
+    
+    <link rel="stylesheet" href="/css/vno.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    
+    <link rel="icon" href="/images/avatar-small.png">
+    
+
+    <meta name="generator" content="hexo"/>
+    
+    <link rel="alternate" type="application/rss+xml" title="sinnamm" href="/atom.xml">
+    
+
+    <link rel="canonical" href="http://wmmmm.github.io/2017/09/16/JQuery语法、选择器和常用元素操作/"/>
+
+                 
+</head>
+
+<body class="home-template no-js">
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 sinnamm 的主页"><img src="/images/avatar.jpg" width="80" alt="sinnamm logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for sinnamm">sinnamm</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">简单.美好</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">来一起排列字母，改变世界呀</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">myBlog</a></li>
+            
+              <li class="navigation__item"><a href="/">主页</a></li>
+            
+              <li class="navigation__item"><a href="/categories/blog">技术栈</a></li>
+            
+              <li class="navigation__item"><a href="/categories/essay">随笔堆</a></li>
+            
+              <li class="navigation__item"><a href="/aboutme">关于我</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+  <li class="navigation__item">
+    <a href="http://weibo.com/5602162089/profile?topnav=1&amp;wvr=6" title="我的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> 
+
+
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/Wmmmm" title="查看我的GitHub主页" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+
+<!-- Facebook -->
+
+  <li class="navigation__item">
+    <a href="https://www.facebook.com/mei.wang.56027" title="上Facebook找我" target="_blank">
+      <i class='social fa fa-facebook'></i>
+      <span class="label">Facebook</span>
+    </a>
+  </li>
+
+  
+<!-- Twitter -->
+
+  
+
+  <li class="navigation__item">
+    <a href="/atom.xml" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-purple"></div>
+  </div> 
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2017-09-15T16:00:00.000Z" class="post-list__meta--date date">2017-09-16</time> &#8226; <span class="post-meta__tags tags">于 
+  <a class="tag-link" href="/tags/jQuery/">jQuery</a>
+ </span>
+      <span class="page-pv">
+       阅读 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+      </span> 
+   
+    </div>
+    <h1 class="post-title">JQuery语法、选择器和常用元素操作</h1>
+  </header>
+
+  <section class="post">
+    <h1 id="JQuery语法、选择器和常用元素操作"><a href="#JQuery语法、选择器和常用元素操作" class="headerlink" title="JQuery语法、选择器和常用元素操作"></a>JQuery语法、选择器和常用元素操作</h1><p>jQuery是js的函数库，用面向对象的思想进行DOM编程jquery对象就是通过jQuery包装DOM对象，但是jQuery不能使用DOM对象的任何方法，DOM也不能使用jQuery中的方法。DOM对象和jQuery对象可以相互转换。</p>
+<pre><code>var username = document.getElementById(&quot;username&quot;);
+//转化为jQuery对象，约定jQuery对象变量前加上$
+var $username = $(username);
+//jQuery转换成DOM对象
+//方法一：jQuery对象是一个数组对象，可以通过[index]方法的到DOM对象
+var username1 = $username[0];
+//方法二：jQuery本身提供get(index)方法，得到相应的DOM对象
+var username2 = $username.get(0);
+</code></pre><h2 id="一、jQuery功能"><a href="#一、jQuery功能" class="headerlink" title="一、jQuery功能"></a>一、jQuery功能</h2><ul>
+<li>HTML元素的选取</li>
+<li>HTML元素的操作</li>
+<li>css的操作</li>
+<li>事件函数</li>
+<li>Ajax</li>
+</ul>
+<h2 id="二、Query语法："><a href="#二、Query语法：" class="headerlink" title="二、Query语法："></a>二、Query语法：</h2><p>选取元素-&gt;执行操作：$/jquery(“选择符”).函数</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;button&quot; value=&quot;jq点击&quot; id=&quot;jqbtn&quot;&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">//id选择符</div><div class="line">$(&quot;#jqbtn&quot;).click(function()&#123;</div><div class="line">alert(&quot;点击了&quot;);</div><div class="line">&#125;);</div><div class="line">//简写</div><div class="line">$(&quot;#jqbtn&quot;).on(&quot;click&quot;,function()&#123;</div><div class="line"> alert(&quot;点击了&quot;);</div><div class="line">&#125;)</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</code></pre><p>注意：jQuery是逐行执行的，在构建事件的时候，要操作的对象应该放在jQuery块前。如果非要把jQuery块放在头文件，则需要调用document的ready方法解析整个页面之后再操作对象</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;</div><div class="line"> $(&quot;#jqbtn&quot;).click(function()&#123;</div><div class="line">alert(&quot;点击了&quot;);</div><div class="line">&#125;);</div><div class="line">&#125;);</div><div class="line">//简写</div><div class="line">$(function()&#123;</div><div class="line"> $(&quot;#jqbtn&quot;).click(function()&#123;</div><div class="line">alert(&quot;点击了&quot;);</div><div class="line">&#125;);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</code></pre><h2 id="三、HTML元素的选取——jQuery选择器"><a href="#三、HTML元素的选取——jQuery选择器" class="headerlink" title="三、HTML元素的选取——jQuery选择器"></a>三、HTML元素的选取——jQuery选择器</h2><h3 id="3-1-基本选择符："><a href="#3-1-基本选择符：" class="headerlink" title="3.1 基本选择符："></a>3.1 基本选择符：</h3><ul>
+<li><p>id选择符:$(“#id属性值”);返回值为单个元素</p>
+</li>
+<li><p>class选择符:$(“.class属性值”);返回一个集合</p>
+</li>
+<li><p>element元素选择符：$(“div”);返回一个元素集合</p>
+</li>
+<li><p><em>通配符：$(“</em>“);不常用，效率低</p>
+</li>
+<li><p>群组选择器：selector1,selector2… :$(“div,#spanId,.myclass”);将每个选择器匹配到的元素合并后一起返回，可以指定多个选择器</p>
+</li>
+<li><p>属性选择器</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//input标签中有name属性的节点</div><div class="line">$(&quot;input[name]&quot;)：</div><div class="line">//选取input标签中name=abc的节点</div><div class="line">$(&quot;input[name=&apos;abc&apos;]&quot;)：</div></pre></td></tr></table></figure>
+<h3 id="3-2-层次选择符"><a href="#3-2-层次选择符" class="headerlink" title="3.2 层次选择符"></a>3.2 层次选择符</h3><ol>
+<li>后代选择器：ancestor descendant</li>
+</ol>
+<pre><code>//选择form表单下的所有input元素
+$(&quot;form input&quot;);
+//ul下的li的所有节点
+$(&quot;ul li *&quot;);
+//div下class为box的节点
+$(&quot;div.box&quot;)
+//多个class选择,class=box下的class=box2的节点
+$(&quot;.box.box2&quot;);
+//jquery还为后代选择器提供了一个等价的方法
+$(&quot;#box&quot;).find(&quot;p&quot;)
+</code></pre><ol>
+<li><p>子代选择器：parent&gt;child，只会选取子节点，孙子节点不会选取</p>
+<pre><code>//form标签下的input标签
+$(&quot;form&gt;input&quot;);
+//等价的方法
+$(&quot;#box&quot;).children(&quot;p&quot;)
+</code></pre></li>
+</ol>
+<ol>
+<li>prev+next:prev的下面一个节点</li>
+</ol>
+<pre><code>//匹配紧接在pre元素之后的next元素
+$(&quot;label+inoput&quot;);
+//等价的方法,next()选择器方法不传参则相当于传递*
+$(&quot;#box&quot;).next(&quot;p&quot;)
+//同一等级的上一个节点
+$(&quot;#box&quot;).prev(&quot;p&quot;)
+</code></pre><ol>
+<li>pre~siblings:匹配所有prev元素之后的所有siblings元素。注意:是匹配之后的元素,不包含该元素在内,并且siblings匹配的是和prev同辈的元素,其后辈元素不被匹配.</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">   //匹配form下的同级的input节点</div><div class="line">$(&quot;form~input&quot;);</div><div class="line">//nextAll选择器等价的方法</div><div class="line">$(&quot;#box&quot;).nextAll(&quot;p&quot;)</div><div class="line">//同一等级的上面同辈节点</div><div class="line">$(&quot;#box&quot;).prevAll(&quot;p&quot;)</div><div class="line">//上下同级的节点</div><div class="line">$(&quot;#box&quot;).siblings(&quot;p&quot;)</div><div class="line">  	 	//向下选取，遇到p则停止选择</div><div class="line">$(&quot;#box&quot;).nextUntil(&quot;p&quot;)</div><div class="line">//向上选取，遇到p则停止选择</div><div class="line">$(&quot;#box&quot;).prevUntil(&quot;p&quot;)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：理论上讲，jQuery提供的find(),next().prev()等方法速度比css选择器快，但是对于客户端脚本没有太大的实用性。使用的话建议用jQuery提供的这些方法</p>
+</blockquote>
+<h3 id="3-3-过滤选择符"><a href="#3-3-过滤选择符" class="headerlink" title="3.3 过滤选择符"></a>3.3 过滤选择符</h3><p>过滤选择器主要是通过特定的过滤规则来筛选出所需的 DOM 元素, 该选择器都以 “:” 开头<br>按照不同的过滤规则（<a href="http://blog.csdn.net/jiangwei0910410003/article/details/32102187" target="_blank" rel="external">详情见</a>） 过滤选择器可以分为：</p>
+<h4 id="基本过滤选择器"><a href="#基本过滤选择器" class="headerlink" title="基本过滤选择器"></a>基本过滤选择器</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">过滤器名</th>
+<th style="text-align:center">jQuery语法</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:right">返回</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">:first</td>
+<td style="text-align:center">$(“li:first”)</td>
+<td style="text-align:center">选取第一个元素</td>
+<td style="text-align:right">单个元素</td>
+</tr>
+<tr>
+<td style="text-align:left">:last</td>
+<td style="text-align:center">$(“li:last”)</td>
+<td style="text-align:center">选取最后一个元素</td>
+<td style="text-align:right">单个元素</td>
+</tr>
+<tr>
+<td style="text-align:left">:not(selector)</td>
+<td style="text-align:center">$(“li:not(.res)”)</td>
+<td style="text-align:center">选取class不是res的元素</td>
+<td style="text-align:right">集合元素</td>
+</tr>
+<tr>
+<td style="text-align:left">:even</td>
+<td style="text-align:center">$(“li:even”)</td>
+<td style="text-align:center">选取索引（0开始）是偶数的所有元素</td>
+<td style="text-align:right">集合元素</td>
+</tr>
+<tr>
+<td style="text-align:left">:odd</td>
+<td style="text-align:center">$(“li:odd”)</td>
+<td style="text-align:center">选取索引（0开始）是奇数的所有元素</td>
+<td style="text-align:right">集合元素</td>
+</tr>
+<tr>
+<td style="text-align:left">:eq(index)</td>
+<td style="text-align:center">$(“li:eq(2)”)</td>
+<td style="text-align:center">选取索引等于index的元素</td>
+<td style="text-align:right">单个元素</td>
+</tr>
+<tr>
+<td style="text-align:left">:gt(index)</td>
+<td style="text-align:center">$(“li:gt(2)”)</td>
+<td style="text-align:center">选取索引大于index的元素</td>
+<td style="text-align:right">集合元素</td>
+</tr>
+<tr>
+<td style="text-align:left">:lt(index)</td>
+<td style="text-align:center">$(“li:lt(2)”)</td>
+<td style="text-align:center">选取索引小于index的元素</td>
+<td style="text-align:right">集合元素</td>
+</tr>
+<tr>
+<td style="text-align:left">:header</td>
+<td style="text-align:center">$(“li:header”)</td>
+<td style="text-align:center">选取标题元素 h1-h6</td>
+<td style="text-align:right">集合元素</td>
+</tr>
+<tr>
+<td style="text-align:left">:animated</td>
+<td style="text-align:center">$(“li:animated”)</td>
+<td style="text-align:center">选取正在执行动画的元素</td>
+<td style="text-align:right">集合元素</td>
+</tr>
+<tr>
+<td style="text-align:left">:focus</td>
+<td style="text-align:center">$(“li:focus”)</td>
+<td style="text-align:center">选取当前被焦点的元素</td>
+<td style="text-align:right">集合元素</td>
+</tr>
+</tbody>
+</table>
+<h4 id="内容过滤选择器"><a href="#内容过滤选择器" class="headerlink" title="内容过滤选择器"></a>内容过滤选择器</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">过滤器名</th>
+<th style="text-align:center">jQuery语法</th>
+<th>说明</th>
+<th style="text-align:right">返回</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">:contains</td>
+<td style="text-align:center">$(“li:contains(‘msg’)”)</td>
+<td>选取包含信息msg的元素</td>
+<td style="text-align:right">集合元素</td>
+</tr>
+<tr>
+<td style="text-align:left">:empty</td>
+<td style="text-align:center">$(“li:contains(‘’)”)</td>
+<td>选取不包含子元素或内容为空的元素</td>
+<td style="text-align:right">元素集合</td>
+</tr>
+<tr>
+<td style="text-align:left">:has(selector)</td>
+<td style="text-align:center">$(“li:has(‘.red’)”)</td>
+<td>选取包含class为red的元素</td>
+<td style="text-align:right">单个元素</td>
+</tr>
+<tr>
+<td style="text-align:left">:parent</td>
+<td style="text-align:center">$(“li:parent”)</td>
+<td>选取有子元素或文本的节点</td>
+<td style="text-align:right">单个元素</td>
+</tr>
+</tbody>
+</table>
+<h4 id="可见性过滤选择器"><a href="#可见性过滤选择器" class="headerlink" title="可见性过滤选择器"></a>可见性过滤选择器</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">过滤器名</th>
+<th style="text-align:center">jQuery语法</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:right">返回</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">:hidden</td>
+<td style="text-align:center">$(“li:hidden”)</td>
+<td style="text-align:center">选取所有不可见元素</td>
+<td style="text-align:right">集合元素</td>
+</tr>
+<tr>
+<td style="text-align:left">:visible</td>
+<td style="text-align:center">$(“li:visible”)</td>
+<td style="text-align:center">选取所有可见元素</td>
+<td style="text-align:right">集合元素</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>属性过滤选择器</li>
+<li>子元素选择器</li>
+<li>表单对象属性过滤选择器</li>
+</ul>
+<h2 id="四、HTML元素的操作——jQuery操作元素"><a href="#四、HTML元素的操作——jQuery操作元素" class="headerlink" title="四、HTML元素的操作——jQuery操作元素"></a>四、HTML元素的操作——jQuery操作元素</h2><h5 id="元素的插入："><a href="#元素的插入：" class="headerlink" title="元素的插入："></a>元素的插入：</h5><ul>
+<li>append(content) :向每个匹配的元素的内部的结尾处追加内容</li>
+<li>appendTo(content) :将每个匹配的元素追加到指定的元素content中的内部结尾处</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(&quot;#hotList&quot;).append(&quot;&lt;li class=&apos;list-group-item&apos; display=&apos;block&apos;&gt;&quot;</div><div class="line">	+&quot;&lt;span class=&apos;badge&apos;&gt;&quot;+json[i].replyCount+&quot;&lt;/span&gt;&quot;</div><div class="line">	+&quot;&lt;a class=&apos;msgtile text-limit&apos; href=&apos;message.jsp?msgid=&quot;+json[i].msgId+&quot;&apos;&gt;&quot;+json[i].msgTopic+&quot;&lt;/a&gt;&quot;</div><div class="line">	+&quot;&lt;/li&gt;&quot;</div><div class="line">					)</div></pre></td></tr></table></figure>
+<ul>
+<li>prepend(content):向每个匹配的元素的内部的开始处插入内容</li>
+<li><p>prependTo(content) :将每个匹配的元素插入到指定的元素content内部的开始处</p>
+</li>
+<li><p>after(content):在每个匹配的元素外部之后插入内容</p>
+</li>
+<li>before(content):在每个匹配的元素外部之前插入内容</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$(&quot;#rp&quot;).before(&quot;&lt;div class=&apos;row msglist&apos; style=&apos;display: block;&apos;&gt;&quot;</div><div class="line">	+&quot;&lt;div class=&apos;col-sm-12&apos;&gt;&quot;</div><div class="line">	+&quot;&lt;div class=&apos;col-sm-8 col-xs-8 text-limit&apos;&gt;&quot;</div><div class="line">	+&quot;&lt;a class=&apos;title&apos; href=&apos;message.jsp?msgid=&quot;+json[i].msgId+&quot;&apos;&gt;&quot;+json[i].msgTopic+&quot;&lt;/a&gt;&quot;</div><div class="line">	+&quot;&lt;/div&gt;&quot;</div><div class="line">	+&quot;&lt;div class=&apos;col-sm-2  col-xs-4 text-center time&apos;&gt;&quot;+json[i].msgTimeStr+&quot;&lt;/div&gt;&quot;</div><div class="line">	+&quot;&lt;div class=&apos;col-sm-2 hidden-xs text-center count&apos;&gt;&quot;+json[i].accessCount+&quot; • &quot;+json[i].replyCount+&quot;&lt;/div&gt;&quot;</div><div class="line">	+&quot;&lt;/div&gt;&quot;</div><div class="line">	+&quot;&lt;/div&gt;&quot;</div><div class="line">					)</div></pre></td></tr></table></figure>
+<ul>
+<li>insertAfter(content):把指定的元素插入到另一个指定的元素元素集合的后面</li>
+<li>insertBefore(content) :把指定的元素插入到另一个指定的元素元素集合的前面</li>
+<li>wrap(html):在指定节点的外层添加一个节点，相当于把指定节点用html创建的节点包住。</li>
+<li>unwrap():移除最靠近的一层外部包裹的节点</li>
+<li>wrapAll():将所有指定元素当做一个整体外部包裹</li>
+<li>wrapInner(content):指定元素内部进行包裹</li>
+<li>clone(true/false):复制一个节点，true 为复制节点的行为。</li>
+</ul>
+<hr>
+<p>以上方法不但能将新创建的 DOM元素插入到档中, 也能对原有的DOM元素进行移动.</p>
+<h5 id="元素的删除和替换："><a href="#元素的删除和替换：" class="headerlink" title="元素的删除和替换："></a>元素的删除和替换：</h5><ul>
+<li>remove();当某个节点用 remove() 方法删除后, 该节点所包含的行为和所有后代节点将被同时删除.这个方法的返回值是一个指向已被删除的节点的引用，不包含该节点的行为</li>
+<li>detach():和remove类似，但返回的jQuery对象会保留其行为。</li>
+<li>empty(): 清空节点 – 清空元素中的所有后代节点(不包含属性节点).</li>
+<li>replaceWith(Content):将指定节点替换成content</li>
+<li>replaceAll(content):作用同上</li>
+</ul>
+<h5 id="获取和赋值元素值"><a href="#获取和赋值元素值" class="headerlink" title="获取和赋值元素值"></a>获取和赋值元素值</h5><ul>
+<li>val();</li>
+<li>val(str);</li>
+<li>text();</li>
+<li>html();</li>
+</ul>
+<h5 id="属性操作"><a href="#属性操作" class="headerlink" title="属性操作"></a>属性操作</h5><ul>
+<li>attr(“属性名”);：获取属性值，可获取自定义属性</li>
+<li>attr(“属性名”,”属性值”);：设置属性值</li>
+<li>removeAttr(“属性名”)；：删除指定元素的属性</li>
+</ul>
+<h2 id="五、css的操作"><a href="#五、css的操作" class="headerlink" title="五、css的操作"></a>五、css的操作</h2><h4 id="样式操作"><a href="#样式操作" class="headerlink" title="样式操作"></a>样式操作</h4><p>-addClass(“样式名”)</p>
+<ul>
+<li>removeClass()</li>
+<li>toggleClass()</li>
+<li>hasClass()</li>
+</ul>
+<h4 id="css操作"><a href="#css操作" class="headerlink" title="css操作"></a>css操作</h4><ul>
+<li>css()：获取和设置元素的样式属性</li>
+<li><p>opacity属性：获取和设置元素的透明度</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(&quot;#cssBtn&quot;),click(function()&#123;</div><div class="line">    $(&quot;#p&quot;).css(&quot;color&quot;,&quot;red&quot;);</div><div class="line">    //设置多个css属性</div><div class="line">    $(&quot;#p&quot;).css(&#123;&quot;color&quot;:&quot;red&quot;,&quot;font-size&quot;:&quot;2em&quot;&#125;)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>addClass();</p>
+</li>
+<li>removeClass();</li>
+</ul>
+<h4 id="jQuery操作动画"><a href="#jQuery操作动画" class="headerlink" title="jQuery操作动画"></a>jQuery操作动画</h4><ul>
+<li>hide(500);</li>
+<li>show();</li>
+<li>fadeIn();</li>
+<li>fadeOut();</li>
+</ul>
+
+  </section>
+
+</article>
+
+<section class="read-more">
+           
+    
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">最近的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2017/09/16/JQuery的事件函数/" title="JQuery的事件函数">JQuery的事件函数</a></h2>
+                <p class="excerpt">
+                
+                一、jQuery的事件函数1、基础事件jQuer通过.bind()方法来为元素绑定事件，可以传递三个参数：bind(type,[data],function),
+
+type:表示一个或多个类型的事件名字符串（click,dbclick,mousedown,mouseup,mousemove,mous
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2017-09-15T16:00:00.000Z" class="post-list__meta--date date">2017-09-16</time> &#8226; <span class="post-list__meta--tags tags">于 
+  <a class="tag-link" href="/tags/jQuery/">jQuery</a>
+</span><a class="btn-border-small" href="/2017/09/16/JQuery的事件函数/">继续阅读</a></div>
+                           
+            </div>
+        
+        
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">更早的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2017/09/16/jQuery的ajax/" title="jQuery的ajax">jQuery的ajax</a></h2>
+                <p class="excerpt">
+                
+                &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ajax可以实现无刷新状态更新页面，并且实现异步提交，提升用户体验，提升web程序的性能，减轻服务器和宽带的负担。同步和异步的区别自已自己去理解一下，这里就不再赘述了。
+一、jQuery封装ajax请求1. .load方法&amp;nbsp;&amp;nbsp;&amp;nb
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2017-09-15T16:00:00.000Z" class="post-list__meta--date date">2017-09-16</time> &#8226; <span class="post-list__meta--tags tags">于 
+  <a class="tag-link" href="/tags/jQuery/">jQuery</a>
+</span><a class="btn-border-small" href="/2017/09/16/jQuery的ajax/">继续阅读</a></div>
+                       
+            </div>
+        
+     
+   
+   
+  
+</section>
+
+  
+<section class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'Wmmmm'; 
+      
+  var disqus_identifier = '/2017/09/16/JQuery语法、选择器和常用元素操作/';
+  var disqus_title = 'JQuery语法、选择器和常用元素操作';
+  var disqus_url = 'http://wmmmm.github.io/2017/09/16/JQuery语法、选择器和常用元素操作/';
+  
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          //dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+          dsq.src = 'https://a.disquscdn.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+            <footer class="footer">
+    <span class="footer__copyright">
+        &copy; 2017 sinnamm - 本站点采用 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+       
+    </span>
+    <span class="footer__copyright">
+             - 基于 <a href="http://hexo.io">Hexo</a> 搭建，使用 <a href="https://github.com/monniya/hexo-theme-new-vno ">new-vno</a> 主题，由<a href="https://monniya.com ">@Monniya</a> 修改自 <a href="https://github.com/lenbo-ma/hexo-theme-vno" target="_blank">Vno</a>, 原创出自<a href="http://github.com/onevcat/vno" target="_blank">onevcat</a>
+         </span>
+       
+    
+    
+</footer>
+
+
+        </div>
+    </div>
+
+     
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-78918255-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?9cdad07c755fa23f6aced510c6760e87";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    
+</body>
+</html>
